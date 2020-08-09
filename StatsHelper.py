@@ -78,14 +78,21 @@ def save_uuid_list():
 
 
 def isBot(name):
-	blacklist = 'A_Pi#nw#sw#SE#ne#nf#SandWall#storage#Steve#Alex###########'
-	black_keys = ['farm', 'bot_', 'cam', '_b_', 'bot-']
-	if blacklist.find(name) >= 0 or len(name) < 4 or len(name) > 16:
-		return True
-	for black_key in black_keys:
-		if name.find(black_key) >= 0:
+	#blacklist = 'A_Pi#nw#sw#SE#ne#nf#SandWall#storage#Steve#Alex###########'
+	#black_keys = ['farm', 'bot_', 'cam', '_b_', 'bot-']
+	#if blacklist.find(name) >= 0 or len(name) < 4 or len(name) > 16:
+	#	return True
+	#for black_key in black_keys:
+	#	if name.find(black_key) >= 0:
+	#		return True
+	#return False
+	whitelist_path = ''
+	with open(whitelist_path, 'r') as f:
+		whitelist = list(f.read().split('\n'))
+		if name in whitelist:
+			return False
+		else:
 			return True
-	return False
 
 
 def print_message(server, info, msg, is_tell=True):
