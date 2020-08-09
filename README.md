@@ -1,3 +1,6 @@
+一个配合Whitelist_Synchronizer插件使用的带白名单过滤器的StatsHelper
+
+
 StatsHelper
 -------
 
